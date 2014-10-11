@@ -19,7 +19,7 @@ getDownloads = (robot, room) ->
       json = JSON.parse body
       robot.send(
         room
-        "@channel: #{yesterday_ja} の新規ダウンロード: #{json.day?["@value"]}"
+        "#{yesterday_ja} の新規ダウンロード: #{json.day?["@value"]}"
       )
 
 module.exports = (robot) ->
