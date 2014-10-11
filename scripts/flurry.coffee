@@ -28,4 +28,4 @@ module.exports = (robot) ->
   ).start()
 
   robot.respond /down$/i, (msg) ->
-    getDownloads(robot, msg.envelope.room)
+    getDownloads(robot, {room: "##{msg.envelope.room}"})
