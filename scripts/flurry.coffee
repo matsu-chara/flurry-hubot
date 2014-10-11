@@ -24,8 +24,8 @@ getDownloads = (robot, room) ->
 
 module.exports = (robot) ->
   new cronJob('0 11-23/12 * * *', () ->
-    getDownloads(robot, {room: '#bot'})
+    getDownloads(robot, { room: '#bot' })
   ).start()
 
   robot.respond /down$/i, (msg) ->
-    getDownloads(robot, {room: "##{msg.envelope.room}"})
+    getDownloads(robot, { room: msg.envelope.room })
